@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
+  
   plano = {
     info : {
       tipo: 'Simples',
@@ -13,6 +14,10 @@ export class CardComponent {
     }
   };
   
+  plano2 : any = {//o any aqui serve so pra nao dar o erro no html de tipos nao ser encontrado 'never'. O any indica que pode se receber quaisquer tipos de objeto a qualquer momento.
+    info : undefined
+  }
+
   tipo = 'Simples';
   preco = 100;
 
