@@ -20,3 +20,9 @@
         font-size: 40px;
     }
 }
+
+/*:host ::ng-deep mat-slider .mdc-slider__track--active_fill{
+    border-color: yellowgreen !important;
+} - :host isola para rolar apenas no componente e ::ng-deep aprofunda pra chegar no filho
+ - mat-slider - tag
+ - .mdc-slider__track--active_fill classe do componente*/ 
