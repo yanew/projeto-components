@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -24,4 +24,12 @@ export class CardComponent {
   getFullPrice(){
     return 'R$' + this.preco + ',00/Mês';
   }
+
+  @Input('planType') planType: string = "";
+  @Input({required: true, alias: 'planPriceAlias'}) planPrice: number = 0;
+
+  buttonClicked(){
+    console.log('yane');
+  }
+
 }
