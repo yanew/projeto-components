@@ -27,15 +27,7 @@ export class CardComponent {
 
   @Input({required: true, alias: 'planPriceAlias'}) planPrice: number = 0;
 
-  private _planType: string = '';
-
-  @Input('planType') set planType(value: string) {
-    this._planType = value.toUpperCase();
-  };
-
-  get planType(): string {
-    return this._planType;
-  }
+  @Input({alias: 'planType', transform: (value: string) => value.toUpperCase()}) planType: string = "";
 
 
   buttonClicked(valueEmitted: boolean){
