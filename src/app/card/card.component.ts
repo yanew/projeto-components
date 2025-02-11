@@ -28,8 +28,8 @@ export class CardComponent {
   @Input('planType') planType: string = "";
   @Input({required: true, alias: 'planPriceAlias'}) planPrice: number = 0;
 
-  buttonClicked(){
-    console.log('yane');
+  buttonClicked(valueEmitted: boolean){
+    console.log('yane', valueEmitted);
   }
 
 }
