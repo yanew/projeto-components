@@ -25,8 +25,18 @@ export class CardComponent {
     return 'R$' + this.preco + ',00/Mês';
   }
 
-  @Input('planType') planType: string = "";
   @Input({required: true, alias: 'planPriceAlias'}) planPrice: number = 0;
+
+  private _planType: string = '';
+
+  @Input('planType') set planType(value: string) {
+    this._planType = value.toUpperCase();
+  };
+
+  get planType(): string {
+    return this._planType;
+  }
+
 
   buttonClicked(valueEmitted: boolean){
     console.log('yane', valueEmitted);
